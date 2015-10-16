@@ -1,0 +1,42 @@
+$data-body-color: #efefef;
+$merriweather: 'Merriweather', serif;
+$btn-gray: #5b616b;
+
+.heading {
+  font-family: $merriweather !important;
+  font-weight: normal;
+}
+#data {
+  #data-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.3em/39px;
+    padding: 15px 0;
+  }
+  #data-body {
+    background-color: $data-body-color;
+    #filter-heading {
+      font-weight: bold;
+      font-size: 120%;
+    }
+    #filter-button-wrapper{
+      padding: 15px 0;
+      button {
+        border-radius: 0;
+        background-color: $btn-gray;
+        color: #fff;
+      }
+    }
+    .dropdown-wrapper {
+      padding: 15px 0;
+      button {
+        width: 100%;
+        text-align: left;
+        span {
+          float: right;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
