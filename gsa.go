@@ -7,10 +7,17 @@ import (
     "log"
     "strconv"
     "fmt"
+    "html/template"
 )
 
  func Index(w http.ResponseWriter, r *http.Request) {
-	     w.Write([]byte("Hello World"))
+   t := template.New("index.html") 
+   t, _ = t.ParseFiles("./index.html")  // Parse template file.
+   t.Execute(w, nil)
+}
+
+type DataSet struct {
+  Data []float64
 }
 
 /* Placeholder for data processing function */
@@ -27,9 +34,9 @@ func ProcessData(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     r := mux.NewRouter()
-    r.HandleFunc("/api/test", ProcessData)
+    r.HandleFunc("/", Index)
     r.HandleFunc("/api/process", ProcessData)
-    err := http.ListenAndServe(":5000", r)
+    err := http.ListenAndServe(":7000", r)
     if err != nil {
       log.Fatal(err)
     }
