@@ -42,9 +42,10 @@
           </div>
         </fieldset>
       </div>
+      <div id="progress-bar"></div>
     </div>
     <div class="row">
-      <button type="button" id="upload-btn" class="btn btn-default">Upload Data</button>
+      <button type="button" id="upload-btn" class="btn btn-default" data-toggle="modal" data-target="#upload-modal">Upload Data</button>
     </div>
     <div class="row">
       <canvas id="myChart" width="400" height="400"></canvas>
@@ -54,11 +55,26 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-  <script src="dist/jquery.js"></script>
-  <script src="dist/Chart.js"></script>
+  <!--<script src="dist/jquery.js"></script>-->
+  <!--<script src="dist/Chart.js"></script>-->
   <script src="js/run.js"></script>
 </body>
+
+<div class="modal fade" id="upload-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="upload-message">Please Select A File</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default">View Data</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </html>

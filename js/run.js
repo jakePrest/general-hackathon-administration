@@ -22,7 +22,7 @@ var data = {
 };
 
 var options = {};
-var myBarChart = new Chart(ctx).Bar(data, options);
+//var myBarChart = new Chart(ctx).Bar(data, options);
 
 document.getElementById('txtFileUpload').addEventListener('change', upload, false);
 
@@ -37,8 +37,12 @@ function browserSupportFileUpload() {
 
 // Method that reads and processes the selected file
 function upload(evt) {
+    console.log("upload");
+    var modalMessage = "";
   if (!browserSupportFileUpload()) {
     alert('The File APIs are not fully supported in this browser!');
+      modalMessage += 'The File APIs are not fully supported in this browser!';
+      document.getElementById("upload-message").innerHTML = modalMessage;
   } else {
     var data = null;
     var file = evt.target.files[0];
@@ -48,12 +52,19 @@ function upload(evt) {
       var csvData = event.target.result;
       var jsonData = CSV2JSON(csvData);
       console.log(jsonData);
+       modalMessage = "Upload Successful";
+        document.getElementById("upload-message").innerHTML = modalMessage;
     };
     reader.onerror = function() {
-      alert('Unable to read ' + file.fileName);
+      //alert('Unable to read ' + file.fileName);
+      modalMessage = 'Unable to read ' + file.fileName;
+        document.getElementById("upload-message").innerHTML = modalMessage;
     };
   }
+
 }
+
+
 
 //var csv is the CSV file with headers
 function CSVToArray(strData, strDelimiter) {
@@ -124,3 +135,4 @@ function CSV2JSON(csv) {
 
     return str;
 }
+
