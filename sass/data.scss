@@ -1,12 +1,19 @@
 $data-body-color: #efefef;
 $merriweather: 'Merriweather', serif;
 $btn-gray: #5b616b;
+$header-bckg-color: #1c5797;
 
 .heading {
   font-family: $merriweather !important;
   font-weight: normal;
 }
 #data {
+  .block {
+    border-top: solid 2px $header-bckg-color;
+    height: 200px;
+    background-color: #fff;
+    width: 100%;
+  }
   #data-title {
     font-weight: 700;
     font-size: 30px;
@@ -18,6 +25,7 @@ $btn-gray: #5b616b;
     #filter-heading {
       font-weight: bold;
       font-size: 120%;
+      padding: 10px 0 0 0;
     }
     #filter-button-wrapper{
       padding: 15px 0;
