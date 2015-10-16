@@ -1,0 +1,62 @@
+@import "data.scss";
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,400italic|Open+Sans:400,300,600,700);
+
+$header-bckg-color: #1c5797;
+$merriweather: 'Merriweather', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+.heading {
+  font-family: $merriweather !important;
+}
+.text {
+  font-family: $open-sans !important;
+}
+#header {
+  background-color: $header-bckg-color;
+  padding: 15px;
+  color: #fff;
+  font-size: 130%;
+  font-weight: lighter;
+  img {
+    height: 20px;
+    padding: 0 15px;
+  }
+}
+#body {
+  #welcome {
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+    padding: 150px 0 0 0;
+  }
+  #upload-wrapper {
+    padding: 10px;
+    #legend-wrapper {
+      legend {
+        width: auto;
+        margin: auto;
+        font-size: 100%;
+        border: none;
+      }
+    }
+    #input-wrapper {
+      padding: 10px;
+      input {
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+  #upload-btn {
+    border-radius: 0;
+    display: block;
+    margin: auto;
+    padding: 15px 10px;
+  }
+}
+
+#upload-modal {
+  button, a {
+    border-radius: 0;
+  }
+}
