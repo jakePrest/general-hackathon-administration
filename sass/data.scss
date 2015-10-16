@@ -27,5 +27,16 @@ $btn-gray: #5b616b;
         color: #fff;
       }
     }
+    .dropdown-wrapper {
+      padding: 15px 0;
+      button {
+        width: 100%;
+        text-align: left;
+        span {
+          float: right;
+          margin-top: 8px;
+        }
+      }
+    }
   }
 }
