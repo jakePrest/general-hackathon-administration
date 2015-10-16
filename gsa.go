@@ -8,7 +8,7 @@ import (
 )
 
  func Index(w http.ResponseWriter, r *http.Request) {
-	     w.Write([]byte("Hello World"))
+	     w.Write([]byte("Testing API"))
 }
 
 func main() {
