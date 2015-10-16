@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/all.css">
   <!-- Bootstrap -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -23,15 +24,16 @@
         <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div id="header">
-    Logo Here
+  <div id="header" class="heading">
+    <img src="design-assets/img/gsa-logo_white_512x202.svg">
+    Data Center Consolidation
   </div>
 
   <div class="container" id="body">
-    <div id="welcome">
+    <div id="welcome" class="heading">
       Welcome
     </div>
-    <div id = "upload-wrapper">
+    <div id="upload-wrapper" class="text">
       <div id="dvImportSegments" class="fileupload ">
         <fieldset>
           <div id="legend-wrapper">
@@ -42,9 +44,8 @@
           </div>
         </fieldset>
       </div>
-      <div id="progress-bar"></div>
     </div>
-    <div class="row">
+    <div class="row text">
       <button type="button" id="upload-btn" class="btn btn-default" data-toggle="modal" data-target="#upload-modal">Upload Data</button>
     </div>
     <div class="row">
@@ -62,7 +63,7 @@
   <script src="js/run.js"></script>
 </body>
 
-<div class="modal fade" id="upload-modal">
+<div class="modal fade text" id="upload-modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

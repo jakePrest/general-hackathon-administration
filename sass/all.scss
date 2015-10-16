@@ -1,7 +1,26 @@
 @import "data.scss";
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,400italic|Open+Sans:400,300,600,700);
+
+$header-bckg-color: #1c5797;
+$merriweather: 'Merriweather', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+.heading {
+  font-family: $merriweather !important;
+}
+.text {
+  font-family: $open-sans !important;
+}
 #header {
-  border-bottom: solid thin black;
-  padding: 10px;
+  background-color: $header-bckg-color;
+  padding: 15px;
+  color: #fff;
+  font-size: 130%;
+  font-weight: lighter;
+  img {
+    height: 20px;
+    padding: 0 15px;
+  }
 }
 #body {
   #welcome {
@@ -37,7 +56,7 @@
 }
 
 #upload-modal {
-  button {
+  button, a {
     border-radius: 0;
   }
 }
