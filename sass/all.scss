@@ -1,0 +1,30 @@
+#header {
+  border-bottom: solid thin black;
+  padding: 10px;
+}
+#body {
+  #welcome {
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+    padding: 150px 0 0 0;
+  }
+  #upload-wrapper {
+    padding: 10px;
+    #legend-wrapper {
+      legend {
+        width: auto;
+        margin: auto;
+        font-size: 100%;
+        border: none;
+      }
+    }
+    #input-wrapper {
+      padding: 10px;
+      input {
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+}

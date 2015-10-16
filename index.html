@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,9 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.css">
+  <!-- Bootstrap -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,17 +23,33 @@
         <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div id="dvImportSegments" class="fileupload ">
-    <fieldset>
-      <legend>Upload your CSV File</legend>
-      <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
-    </fieldset>
+  <div id="header">
+    Logo Here
   </div>
 
-  <canvas id="myChart" width="400" height="400"></canvas>
+  <div class="container" id="body">
+    <div id="welcome">
+      Welcome
+    </div>
+    <div id = "upload-wrapper">
+      <div id="dvImportSegments" class="fileupload ">
+        <fieldset>
+          <div id="legend-wrapper">
+            <legend>Upload your CSV File</legend>
+          </div>
+          <div id="input-wrapper">
+            <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
+          </div>
+        </fieldset>
+      </div>
+    </div>
 
 
+    <canvas id="myChart" width="400" height="400"></canvas>
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <script src="dist/jquery.js"></script>
   <script src="dist/Chart.js"></script>
